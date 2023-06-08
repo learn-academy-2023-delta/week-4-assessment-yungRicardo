@@ -70,8 +70,7 @@ const votes2 = { upVotes: 2, downVotes: 33 }
 // b) Create the function that makes the test pass.
 
 const endTally = (obj) => {
-  var totalTally = obj.upVotes - obj.downVotes
-  return totalTally
+  return obj.upVotes - obj.downVotes
 }
 
 
@@ -79,8 +78,7 @@ const endTally = (obj) => {
 
 // create function thats take obj returns end tally of upVotes and downVotes
 // inside code block declare new variable totalTally
-// assign object upVotes - downVotes to new variable
-// return totalTally 
+// return object upVotes - downVotes
 
 // --------------------3) Create a function that takes in two arrays as arguments and returns one array with no duplicate values. STRETCH: Use the spread operator to pass in a dynamic number of arguments.
 
@@ -88,7 +86,14 @@ const endTally = (obj) => {
 
 const dataTypesArray1 = ["array", "object", "number", "string", "Boolean"]
 const dataTypesArray2 = ["string", "null", "Boolean", "string", "undefined"]
+mergedArr = [...dataTypesArray1, ...dataTypesArray2]
 // Expected output: ["array", "object", "number", "string", "Boolean", "null", "undefined"]
+
+describe("dataTypes", () => {
+  it("returns an array with unique values", () => {
+      expect(dataTypes(mergedArr)).toEqual(["array", "object", "number", "string", "Boolean", "null", "undefined"])
+  })
+})
 
 // b) Create the function that makes the test pass.
 
@@ -100,17 +105,15 @@ const dataTypesArray2 = ["string", "null", "Boolean", "string", "undefined"]
 // console.log(dataTypes(dataTypesArray1, dataTypesArray2))
 
 const dataTypes = (...data) => {
-  var noDuplicates = [...new Set(data)]
-  return noDuplicates 
+  return [...new Set(...data)] 
 }
 
-mergedArr = [...dataTypesArray1, ...dataTypesArray2]
-console.log(dataTypes(...mergedArr))
+console.log(dataTypes(mergedArr))
 
 
 // Pseudo code:
 
 // Create function that accepts a dynamic number of arguments and returns an array with unique values
-// Declare variable and assign it the value [...new Set(data)]
-//the Set object accepts an array as arugment and returns a set with unique values. While the spread is used to hold the uniquw elements
-//we merge the the 2 arrays together using spread syntax and invoke dataTypes passing the mergedArr as a argument.
+// The Set object accepts an array as arugment and returns a set with unique values. 
+// While the spread is used to hold the unique elements. Using [...new Set(data)]
+// We merge the the 2 arrays together using spread syntax and invoke dataTypes passing the mergedArr as a argument.

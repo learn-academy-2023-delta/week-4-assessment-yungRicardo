@@ -12,14 +12,14 @@ reposts3 = 221
 
 def num_is_odd_or_even (num) 
     if (num % 2 != 0) 
-        puts "#{num} is odd"
+        "#{num} is odd"
     elsif (num % 2 == 0)
-        puts "#{num} is even"
+        "#{num} is even"
     end
 end
-num_is_odd_or_even(reposts1)
-num_is_odd_or_even(reposts2)
-num_is_odd_or_even(reposts3)
+puts num_is_odd_or_even(reposts1)
+puts num_is_odd_or_even(reposts2)
+puts num_is_odd_or_even(reposts3)
 
 # -------------------2) Create a method that takes in a string and removes all the vowels from the string. Use the test variables provided. 
 # HINT: Check out this resource: https://ruby-doc.org/core-2.6/String.html#method-i-delete
@@ -32,11 +32,11 @@ beatles_album3 = 'Abbey Road'
 # Expected output: 'bby Rd'
 
 def remove_vowels (str)
-    puts str.delete("aeiouAEIOU")
+    str.delete("aeiouAEIOU")
 end
-remove_vowels(beatles_album1)
-remove_vowels(beatles_album2)
-remove_vowels(beatles_album3)
+puts remove_vowels(beatles_album1)
+puts remove_vowels(beatles_album2)
+puts remove_vowels(beatles_album3)
 
 # -------------------3) Create a method that takes in a string and checks if the string is a palindrome. A palindrome is the same word spelled forward or backward. Use the test variables provided.
 
@@ -50,14 +50,14 @@ palindrome_test_case3 = 'Rotator'
 def is_palindrome (str)
     temp = str.downcase
     if temp.reverse == temp
-        puts "#{str} is a palindrome"
+        "#{str} is a palindrome"
     elsif temp.reverse != temp 
-        puts "#{str} is not a palindrome"
+        "#{str} is not a palindrome"
     end
 end
 
 
 
-is_palindrome(palindrome_test_case1)
-is_palindrome(palindrome_test_case2)
-is_palindrome(palindrome_test_case3)
+puts is_palindrome(palindrome_test_case1)
+puts is_palindrome(palindrome_test_case2)
+puts is_palindrome(palindrome_test_case3)

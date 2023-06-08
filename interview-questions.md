@@ -32,7 +32,7 @@ Researched answer: A block is a piece of code that can be passed to a method as 
 
 5. How do you extract a single value from a Ruby hash?
 
-Your answer: to extract a value from a hash you must find the key that you trying to access.
+Your answer: To extract a value from a hash you must find the key that you trying to access. You can use the bracket notation hash[:key] to access the value associated with a specific key.
 
 Researched answer: To access a single value from a hash, you must know the corresponding key is. Comparing a hash and a dictionary, where each key has a specific value associated with it.
 
